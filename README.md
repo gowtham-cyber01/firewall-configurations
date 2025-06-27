@@ -37,23 +37,23 @@ Opened Linux Terminal and used UFW (installed via apt).
 - **sudo apt update**
 - **sudo apt install ufw**
 
-✅ 2. List Current Firewall Rules
+### ✅ 2. List Current Firewall Rules
 - **sudo ufw status**
 - This shows the current firewall rules and whether UFW is active.
 sudo ufw status numbered
 -Lists the rules with numbers for easy removal.
 
-✅ 3. Add Rule to Block Port 23 (Telnet)
+### ✅ 3. Add Rule to Block Port 23 (Telnet)
 - **sudo ufw deny 23**
 - This blocks inbound traffic on port 23 to protect against insecure Telnet connections.
 
-✅ 4. Test the Rule
+### ✅ 4. Test the Rule
 - **telnet localhost 23**
 -result: Connection refused (proves the firewall rule is active and working).
 
-✅ 5. Add Rule to Allow SSH (Port 22)
+### ✅ 5. Add Rule to Allow SSH (Port 22)
 - **sudo ufw allow 22**
 -This ensures that SSH connections are still allowed for remote access.
 
-✅ 6. Remove the Test Block Rule
+### ✅ 6. Remove the Test Block Rule
 - **sudo ufw delete 22**
